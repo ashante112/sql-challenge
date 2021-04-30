@@ -38,11 +38,10 @@
 -- 	);
 
 -- CREATE TABLE dept_emp(
--- 	emp_no INT PRIMARY KEY,
--- 	dept_no VARCHAR(4),
--- 	CONSTRAINT fk_emp_dept_id
---     	FOREIGN KEY (dept_no)
---     	REFERENCES departments (dept_no)
+-- 	emp_no INT,
+-- 	dept_no VARCHAR(4) NOT NULL,
+--  	Foreign Key (dept_no) references departments(dept_no),
+--  	Primary Key (emp_no)
 -- 	);
 	
 -- CREATE TABLE dept_manager(
@@ -51,7 +50,15 @@
 -- 	CONSTRAINT dept_mgr_pk PRIMARY KEY (dept_no, emp_no)
 -- 	);
 
+-- SELECT *
+-- FROM dept_emp
+
+-- List the following details of each employee: employee number, last name, first name, sex, and salary
+
 SELECT *
-FROM dept_emp
+FROM employees
+JOIN salaries
+ON (emp_no=emp_no)
+SELECT emp_no, last_name, first_name, sex, salary
 
 	
