@@ -12,10 +12,9 @@
 -- SELECT *
 -- FROM employees
 
-
 -- SELECT employees.first_name, employees.last_name, employees.hire_date
 -- FROM employees
--- WHERE hire_date ;
+-- WHERE EXTRACT(YEAR FROM hire_date) = 1985;
 
 -- QUERY 3: List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
 
